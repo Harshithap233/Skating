@@ -1,0 +1,51 @@
+@charset "ISO-8859-1";
+
+.one{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    justify-content: space-between;
+}
+
+#two{
+    justify-content: space-between;
+    justify-content: space-around;
+    display: flex;
+}
+#f{
+    border: 1px solid green;
+    display: flex;
+    flex-basis: 20px;
+    width: 40px;
+    height: 30px;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    align-items: center;
+
+}
+#third
+{
+	height: 500px;
+	width:1800px;
+}
+
+#fourth
+{
+	height: 500px;
+	width:1800px;
+}
+
+#sixth
+{
+	height: 500px;
+	width:1800px;
+}
+
+#fifth
+{
+	height: 500px;
+	width:1800px;
+}

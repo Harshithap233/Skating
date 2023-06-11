@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+    .dropdown-content {
+      display: none;
+    }
+    .dropdown-content label {
+      display: block;
+    }
+    input[type="checkbox"]:checked ~ .dropdown-content {
+      display: block;
+    }
+    .dropdown {
+      display: none;
+    }
+    .dropdown label {
+      display: block;
+    }
+    input[type="checkbox"]:checked ~ .dropdown {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+<div>
+<img alt="" src="https://indiaskate.com/districts2022/jimages/logo169.png">
+<h1 style="position: relative; left: 800px; top: -60px">District Enrollment 2022-23</h1>
+<h3 style="align-content: center; position: relative; left: 600px">Enrollment Form</h3>
+</div>
+
+<form id="myForm" action="register">
+<table>
+
+<tr>
+<td style="position: relative; top: -200px">Association Name in Full Form:<br>
+<input type="text" name="name" placeholder="Type Here.." style="border-left: 0px; border-top: 0px; border-right: 0px; width: 300px" required></input>
+</td>
+<td><label for="year" style="position: relative; left: 150px; top: -200px">Established in the year of<br></label>
+                    <select name="year" id="year" style="position: relative; left: 150px;top:-200px; box-shadow: 1px 1px 1px 1px; border: 0px; width: 300px; height: 30px">
+                        <option value="select" style="align-items: center;">select</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                        <option value="2016">2016</option>
+                        <option value="2015">2015</option>
+                        <option value="2014">2014</option>
+                        
+                    </select>
+</td>
+
+<td>
+<label for="nof" style="position: relative; left: 300px;top:-200px;">No of Affiliated Clubs in your district :<br></label>
+<input  name="nof" type="number" placeholder="0" style="position: relative; left: 300px;top:-200px;box-shadow: 1px 1px 1px 1px; border: 0px; width: 300px; height: 30px" required="required"></input>
+</td>
+</tr>
+
+<tr>
+<td>
+
+<label style="position: relative;top:-200px;">Official Correspondent (name in full form):</label>
+<br>
+<input type="text" name="corrname"placeholder="Type Here.." style="border-left: 0px; border-top: 0px; border-right: 0px; width: 300px; position: relative; top:-200px;" required="required"></input>
+
+</td>
+<td>
+<label for="status" style="position: relative; left: 150px; top:-200px;">Affiliation Status:<br></label>
+                    <select name="status" id="status" style="position: relative; left: 150px;top:-200px; box-shadow: 1px 1px 1px 1px; border: 0px; width: 300px; height: 30px">
+                        <option value="Affiliated to state" style="align-items: center;">Affiliated to State</option>
+                       
+                        <option value="Not Registered">Not Registered</option>
+                        <option value="Apllied for Affiliation">Apllied For Affiliation</option>
+ </select>
+ </td>
+ 
+ <td>
+ <label style="position: relative; left: 300px;top:-220px;" >Club Names & Phone :</label>
+ <textarea name="club" cols="30" rows="10" style="position: relative; left: 150px; top:-160px; width: 300px; height: 50px" required="required"></textarea>
+ </td>
+</tr>
+
+
+<tr>
+<td>
+<label style="position: relative; top: -200px">Registered Address:<br></label>
+<input type="text"  name="address"style="border-left: 0px; border-top: 0px; border-right: 0px; width: 300px;position: relative;top: -200px" required="required">
+</td>
+<td>
+<label style="position: relative; left: 150px;top: -200px">Societies Act. Reg No : (Put NA if not available):<br></label>
+<input type="number" name="regno"style="border-left: 0px; border-top: 0px; border-right: 0px; width: 300px; position: relative; left: 150px;top: -200px" required="required">
+</td>
+
+<td>
+<label style="position: relative; left: 300px; top:-200px">Acheivements :</label>
+<textarea name="achei" cols="30" rows="10" style="position: relative; left: 200px; top: -140px; width: 300px; height: 50px" required="required"></textarea>
+</td>
+</tr>
+<tr>
+<td>
+<label style="position: relative; top: -200px">Address Line 2:<br></label>
+<input type="text" name="address1" placeholder="Type Here.." style="border-left: 0px; border-top: 0px; border-right: 0px; width: 300px;position: relative;top: -200px" required="required"></input>
+</td>
+<td>
+<label style="position: relative; left: 150px; top: -200px">PAN No : (Put NA if not available)<br></label>
+<input type="text" name="pan" style="border-left: 0px; border-top: 0px; border-right: 0px; width: 300px; position: relative; left: 150px;top: -200px" required="required">
+</td>
+<td>
+<label style="position: relative; left: 300px; top: -140px">Website (Put NA if not available) : </label>
+<input type="text" name="website"style="border-left: 0px; border-top: 0px; border-right: 0px; width: 300px; position: relative;left:300px; top: -140px; height: 20px" required="required">
+</td>
+</tr>
+<tr>
+
+<td>
+<label style="position: relative; top: -200px">City:<br></label>
+<input type="text" name="city"placeholder="Type Here.." style="border-left: 0px; border-top: 0px; border-right: 0px; width: 300px;position: relative;top: -200px" required="required"></input>
+</td>
+<td>
+<label style="position: relative; left: 150px;top: -180px">Bank Account No with Branch & IFSC Code : <br>(Put NA if not available)<br></label>
+<textarea placeholder="type here..." name="bank" id="add" cols="30" rows="10" style="position: relative; left: 150px; top: -180px; width: 300px; height: 50px" required="required"></textarea>
+
+</td>
+<td>
+<label style="position: relative; left: 300px; top: -160px">Facebook Link (Put NA if not available) : :<br></label>
+<input type="text" name="facebook"placeholder="Type Here.." style="border-left: 0px; border-top: 0px; border-right: 0px; width: 300px; position: relative; left: 300px; top: -160px" required="required"></input>
+</td>
+</tr>
+<tr>
+<td>
+<label for="state" style="position:relative; top: -220px">Registering State / U.T.:<br></label>
+                    <select name="state" id="state" style="position: relative;top:-220px; box-shadow: 1px 1px 1px 1px; border: 0px; width: 300px; height: 30px">
+                        <option value="select" style="align-items: center;">ANDAMAN NICOBAR</option>
+                        <option value="Andhra Pradhesh">Andhra Pradhesh</option>
+                        <option value="Karanataka">Karnataka</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="kerala">Kerala</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Jammu Karshmir">Jammu Kashmir</option>
+                        <option value="Lakshadweep">Lakshadweep</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="NagaLand">NagaLand</option>
+                        <option value="West Bengal">West Bengal</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Goa">Goa</option>
+                 			
+ </select>                       
+</td>
+<td>
+ 
+<input type="checkbox" name="disciplines" id="toggle-dropdown" style="position: relative; left: 150px; top: -200px" required="required">
+ <label for="toggle-dropdown"  style="position: relative; left: 150px; top: -200px">Disciplines</label>
+ 
+  <div class="dropdown-content" style="position: relative; left: 150px;top: -200px">
+    <label style="position: relative; left: 150px;top: 70px"><input type="checkbox">Spee-Quad</label>
+    <label style="position: relative; left: 150px;top: 70px"><input type="checkbox"> Speed-Inline</label>
+    <label style="position: relative; left: 150px;top: 70px"><input type="checkbox"> Artistic</label>
+    <label style="position: relative; left: 150px;top: 70px"><input type="checkbox"> Roller-Hockey</label>
+    <label style="position: relative; left: 150px;top: 70px"><input type="checkbox">Inline-Hockey</label>
+    <label style="position: relative; left: 150px;top: 70px"><input type="checkbox">Inline-Freestyle</label>
+    <label style="position: relative; left: 150px;top: 70px"><input type="checkbox">inline-AIpine</label>
+    <label style="position: relative; left: 150px;top: 70px"><input type="checkbox">Inline-Downhill</label>
+    <label style="position: relative; left: 150px;top: 70px"><input type="checkbox">Roller-Freestyle</label>
+    <label style="position: relative; left: 150px;top: 70px"><input type="checkbox"> Skateboarding</label>
+    <label style="position: relative; left: 150px;top: 70px"><input type="checkbox">Scooter</label>
+  </div>
+
+</td>
+
+<td>
+<label style="position: relative; left: 300px;top: -220px">Instagram Link (Put NA if not available) : :</label>
+<input type="text" placeholder="Type Here.." name="instagram"style="border-left: 0px; border-top: 0px; border-right: 0px; width: 300px; position: relative; top:30px; left: 300px;top: -220px" required="required"></input>
+</td>
+<td>
+<label for="intersted" style="position: relative; top: -110px; left: -190px">Interested to host State / National Championships ?</label>
+<input type="radio" name="insterted" id="ins" style="position: relative; top: -80px; left: -290px"><p style="position: relative; top: -115px; left: -150px">Yes Interested </p>
+<input type="radio" name="instered" id="ins" style="position: relative; top: -115px; left: -175px"><p style="position:relative; top:-150px; left: -150px">Not interested</p>
+</td>
+</tr>
+<tr>
+<td>
+<label for="district" style="position:relative;top:-230px; border: 0px">Registering District :<br></label>
+                    <select name="district" id="district" style="position: relative;top:-230px; box-shadow: 1px 1px 1px 1px; border: 0px; width: 300px; height: 30px">
+                        <option value="select" style="align-items: center;">Select District</option>
+                        <option value="Tumkur">Tumkur</option>
+                        <option value="Bengaluru">Bengaluru</option>
+                        <option value="Bengaluru">Bengaluru urban</option>
+                        <option value="Hassan">Hasssan</option>
+                        <option value="Dharwad">Dharwad</option>
+                        <option value="Uttara Kannada">Uttara Kannada</option>
+                        <option value="Bagalkot">Bagalkot</option>
+                        <option value="Raichur">Raichur</option>
+     					<option value="vijayapura">vijapura</option>
+                        <option value="udupi">udupi</option>
+                        <option value="Bidar">Bidar</option>
+                        <option value="Kalaburgi">Kalaburgi</option>
+                        <option value="Ballari">Ballari</option>
+                        <option value="Chikkamagaluru">Chikkamagaluru</option>
+                        <option value="Belagavi">Belagavi</option>
+                        <option value="Chitadurga">Chitradurga</option>
+                        <option value="Shivamogga">Shivamogga</option>
+                        <option value="Mandya">Mandya</option>
+                        <option value="Kodagu">Kodagu</option>
+                        <option value="Gadag-Betageri">Gadag-Betageri</option>
+                        <option value="Dakshina Kannada">Dakshina Kannada</option>
+                        <option value="Kolar">Kolar</option>
+                        <option value="Davanagere">Davanagere</option>
+
+         </select>
+
+</td>
+<td>
+
+<input type="checkbox" id="toggle" style="position: relative; left: 140px; top: -140px">
+  <label for="toggle" name="rinkfacilities"style="position: relative; left: 150px; top: -140px">Rink Facilities Available in your district:
+  </label>
+
+  <div class="dropdown" top="-230px" style="position: relative; left: 150px">
+    <label  style="position: relative; left: 150px; top: -140px"><input type="checkbox">200m Synthetic Parabolic Track</label>
+    <label style="position: relative; left: 150px;top: -140px"><input type="checkbox">Exclusive Road Circuit</label>
+    <label style="position: relative; left: 150px;top: -140px"><input type="checkbox"> 200m Synthetic Banked Track</label>
+    <label style="position: relative; left: 150px;top: -140px"><input type="checkbox">200m Asphalt Banked Track</label>
+    <label style="position: relative; left: 150px;top: -140px"><input type="checkbox">Asphalt Flat Track</label>
+    <label style="position: relative; left: 150px;top: -140px"><input type="checkbox">International Spec.Stone Floor/Inline Hockey Rink</label>
+    <label style="position: relative; left: 150px;top: -140px"><input type="checkbox">Asphalt Roller/Inline Hockey Rink</label>
+    <label style="position: relative; left: 150px;top: -140px"><input type="checkbox">Non Standard Hocker Rink</label>
+    <label style="position: relative; left: 150px;top: -140px"><input type="checkbox">Exclusive Artistic Rink</label>
+    <label style="position: relative; left: 150px;top: -140px"><input type="checkbox">Exclusive Skate Park</label>
+    <label style="position: relative; left: 150px;top: -140px"><input type="checkbox">Non Standard asphalt surface in use(eg.Basket ball court)</label>
+  </div>
+</td>
+
+<td>
+<br>
+</td>
+</tr>
+<tr>
+<td>
+<label style="position: relative; top: -200px;">Mobile:<br></label>
+<input type="number" name="mobile" style="border-left: 0px; border-top: 0px; border-right: 0px; width: 300px;position: relative;top: -200px"></input>
+</td>
+<td>
+<label for="rink" style="position: relative; left: 150px;top: -120px">Rink Status:<br></label>
+                    <select name="rinkstatus" id="rink" style="position: relative; left: 150px;top:-120px; box-shadow: 1px 1px 1px 1px; border: 0px; width: 300px; height: 30px">
+                        <option value="select" style="align-items: center;"><b>Owned</b></option>
+                        <option value="Rented">Rented-Private</option>
+                        <option value="Rented/leased-Govt">Rented/leased-Govt</option>
+                        <option value="Other">Other</option>                        
+                    </select>
+</td>
+</tr>
+<tr>
+<td>
+<label style="position:relative;top: -200px ">Email:<br></label>
+<input type="email" placeholder="Type Here.." style="border-left: 0px; border-top: 0px; border-right: 0px; width: 300px;position: relative;top: -200px" required="required"></input>
+</td>
+<td>
+<label style="position: relative; left: 150px; top: -50px">Office Bearers - Name & Phone :</label>
+<textarea id="add" name="officebearers" placeholder="type here.."  cols="30" rows="10" style="position: relative; left: 150px; top: -50px; width: 300px; height: 50px;" required="required"></textarea>
+</td>
+</tr>
+<tr>
+
+</tr>
+<tr>
+<td>
+<label style="position: relative; top: -200px">Select LOGO (JPG OR PNG):</label>
+<input type="file" name="logo"id="file1" onchange="File1()"style="position: relative; top: -200px" required="required"></input>
+</td>
+<td>
+<label style="position: relative; top: -30px; left: 160px">Societies Registration Certificate-:<br></label>
+<input type="file" name="registrationcertificate" id="file2" onchange="file"   style="position: relative; top: -30px; left: 160px" required></input>
+<h5 style="position: relative; left: 170px; top:-45px ">Upload a PDF with your societies registration certificates. (file size less than 3MB).</h5>
+</td>
+
+<td>
+<label style="position: relative; top: 40px; left:-250px">Executive Committee , Latest Election Results & Affiliation Letter:</label>
+<input type="file" name="affiliationletter" id="file3" onchange="Filevalidation()" style="position: relative; top: 40px; left: -250px" required="required"></input>
+<h5 style="position: relative; top: 40px; left: -240px">Upload A PDF(file lee than 3MB)</h5>
+</td>
+</tr>
+<div>
+<h4 style="position: relative; top:1200px; left: 600px">Declaration</h4>
+<P style="position: relative; top: 1200px">I hereby declare that</P>
+<p style="position: relative; top: 1200px">1.I Know all RSFI Rules & Regulations and I abide by the same.We do not entertain any discipline/sport other than RSFI;failing the same will result in disaffiliation and serious action by state units and RSFI</p>
+<p style="position: relative; top: 1200px" >2.I have attached the proof of registration and affiliation as per RSFI guidelines and i will produce necessary original  documents whenever asked by RSFI.satae Association</p>
+<p style="position: relative; top: 1200px">3. I accept to share the information provided by me to RSFI and any service providers associated with RSFI.</p>
+<p style="position: relative; top: 1200px">4.I accept to receive newsletters/ any communication from of mail,email,phone calls,SMS</p>
+<p style="position: relative; top: 1200px">5.All the information entered in the online registration system(as furnished above)are true and i am responsible for the correctness of the information provided.</p>
+<p style="position: relative; top: 1200px">6.I will accept any decision taken by RSFI if any of the information given above found wrong.RSFI holds all the rights to reject or cancel the enrollment anytime.</p>
+</div>
+<input type="checkbox" name="checkbox" value="checked" style="position: relative; top: 1200px; width: 30px"><P style="position: relative; top: 1165px;left: 30px">I read & agree to terms and conditions</P></input>
+
+</table>
+<button type="submit"  value="submit"  style="position: relative; top: 450px; width: 1500px; height:40px; border: 0px ;background-color: #BCD6BD ">I AGREE TO RSFI RULES & SUBMIT</button>
+</form>
+
+
+<script type="text/javascript">
+
+Filevalidation = () => {
+    const fi = document.getElementById('file3');
+    if (fi.files.length > 0) {
+        for (const i = 0; i <= fi.files.length - 1; i++) {
+ 
+            const fsize = fi.files.item(i).size;
+            const file3 = Math.round((fsize / 1024));
+            if (file3 >= 4096) {
+                alert(
+                  "File too Big, please select a file less than 4mb");
+            } else if (file3 < 2048) {
+                alert(
+                  "File too small, please select a file greater than 2mb");
+            } else {
+                document.getElementById('size').innerHTML = '<b>'
+                + file3 + '</b> KB';
+            }
+        }
+    }
+}
+
+
+File=()=>
+{
+	 const fi1 = document.getElementById('file2');
+	    if (fi1.files.length > 0) {
+	        for (const i = 0; i <= fi1.files.length - 1; i++) {
+	 
+	            const fsize = fi1.files.item(i).size;
+	            const file2 = Math.round((fsize / 1024));
+	            if (file2 >= 4096) {
+	                alert(
+	                  "File too Big, please select a file less than 4mb");
+	            } else if (file2 < 2048) {
+	                alert(
+	                  "File too small, please select a file greater than 2mb");
+	            } else {
+	                document.getElementById('size').innerHTML = '<b>'
+	                + file2 + '</b> KB';
+	            }
+	        }
+	    }
+	}
+	
+	
+File1=()=>
+{
+	const fi2 = document.getElementById('file1');
+    if (fi2.files.length > 0) {
+        for (const i = 0; i <= fi1.files.length - 1; i++) {
+ 
+            const fsize = fi2.files.item(i).size;
+            const file1 = Math.round((fsize / 1024));
+            if (file1 >= 4096) {
+                alert(
+                  "File too Big, please select a file less than 4mb");
+            } else if (file1 < 2048) {
+                alert(
+                  "File too small, please select a file greater than 2mb");
+            } else {
+                document.getElementById('size').innerHTML = '<b>'
+                + file1 + '</b> KB';
+            }
+        }
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    var form = document.getElementById('myForm');
+    
+    form.addEventListener('submit', function(event) {
+      // Prevent form submission if validation fails
+      if (!validateForm()) {
+        event.preventDefault();
+        alert('Please fill in all fields.');
+      }
+    });
+  });
+  
+  function validateForm() {
+    var inputs = document.querySelectorAll('#myForm input');
+    var isValid = true;
+    
+    // Check each input field
+    inputs.forEach(function(input) {
+      if (input.value.trim() === '') {
+        input.classList.add('error');
+        isValid = false;
+      } else {
+        input.classList.remove('error');
+      }
+    });
+    
+    return isValid;
+  }
+</script>
+</body>
+</html>
