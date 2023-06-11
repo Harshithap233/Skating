@@ -27,19 +27,38 @@
 <body>
 <div>
 <img alt="" src="https://indiaskate.com/districts2022/jimages/logo169.png">
-<h1 style="position: relative; left: 800px; top: -60px">District Enrollment 2022-23</h1>
+<h1 style="position: relative; left: 500px; top: -60px">District Enrollment 2022-23</h1>
 <h3 style="align-content: center; position: relative; left: 600px">Enrollment Form</h3>
 </div>
 
-<form id="myForm" action="register">
+<form id="myForm" action="register" >
 <table>
 
 <tr>
-<td style="position: relative; top: -200px">Association Name in Full Form:<br>
-<input type="text" name="name" placeholder="Type Here.." style="border-left: 0px; border-top: 0px; border-right: 0px; width: 300px" required></input>
+<td>
+<label style="position: relative; top: -200px">FullName - As per Aadhaar:</label>
+<input type="text" style="position: relative; top: -200px; width: 300px; height: 30px; border-left: 0px;border-right: 0px;border-right: 0px;border-top: 0px" placeholder="Type here Skater Name.." >
 </td>
-<td><label for="year" style="position: relative; left: 150px; top: -200px">Established in the year of<br></label>
-                    <select name="year" id="year" style="position: relative; left: 150px;top:-200px; box-shadow: 1px 1px 1px 1px; border: 0px; width: 300px; height: 30px">
+<td>
+<label for="gender" style="position: relative; top: -207px"><b>Gender</b></label><br>
+<label  style="position: relative; top: -200px">Male:</label><input type="radio" name="gender" value="male"style="position: relative;top: -200px"></input>
+<label style="position: relative; top: -200px">Female:</label><input type="radio" name="gender" value="female"style="position: relative; top: -200px"></input>
+
+</td>
+<td>
+<label for="dob" style="position: relative; top: -110px; left: -620px;width: 300px" >Date of Birth:</label><br>
+<input onchange="calculateAge()" type="date" id="dob" name="dob" style="position:relative;left: -620px;top: -100px;width: 350px;height: 30px;font-size: 25px"></input><br>
+
+<label for="age" style="position: relative; top: -90px; left: -620px">Age:</label><br>
+<input   id="ageField" name="age" style="position: relative; top: -90px;left: -620px; height: 25px; width: 200px"></input>
+<label for="agegroup" style="position: relative; top: -110px;left: -600px">Age Group:</label>
+<input type="text" id="agegroup" name="agegroup" onchange="agegroup()" style="position: relative; top: -118px;left: -400px;height: 25px">
+</td>
+<td style="position: relative; top: -110px">Association Name in Full Form:<br>
+<input type="text" name="name" placeholder="Type Here.." style="border-left: 0px; border-top: 0px; border-right: 0px; width: 300px; height: 30px" required></input>
+</td>
+<td><label   for="year" style="position: relative; left: -700px; top: -200px" >Established in the year of<br></label>
+                    <select name="year" id="year" style="position: relative; left: -700px;top:-200px; box-shadow: 1px 1px 1px 1px; border: 0px; width: 300px; height: 30px" required="required">
                         <option value="select" style="align-items: center;">select</option>
                         <option value="2022">2022</option>
                         <option value="2021">2021</option>
@@ -50,26 +69,26 @@
                         <option value="2015">2015</option>
                         <option value="2014">2014</option>
                         
-                    </select>
+ </select>
 </td>
 
 <td>
-<label for="nof" style="position: relative; left: 300px;top:-200px;">No of Affiliated Clubs in your district :<br></label>
-<input  name="nof" type="number" placeholder="0" style="position: relative; left: 300px;top:-200px;box-shadow: 1px 1px 1px 1px; border: 0px; width: 300px; height: 30px" required="required"></input>
+<label for="nof" style="position: relative; left: -500px;top:-200px;">No of Affiliated Clubs in your district :<br></label>
+<input  name="nof" type="number" placeholder="0" style="position: relative; left: -500px;top:-200px;box-shadow: 1px 1px 1px 1px; border: 0px; width: 300px; height: 30px" required="required"></input>
 </td>
 </tr>
 
 <tr>
 <td>
 
-<label style="position: relative;top:-200px;">Official Correspondent (name in full form):</label>
+<label style="position: relative;top:-100px;">Official Correspondent (name in full form):</label>
 <br>
-<input type="text" name="corrname"placeholder="Type Here.." style="border-left: 0px; border-top: 0px; border-right: 0px; width: 300px; position: relative; top:-200px;" required="required"></input>
+<input type="text" name="corrname"placeholder="Type Here.." style="border-left: 0px; border-top: 0px; border-right: 0px; width: 300px; position: relative; top:-100px;" required="required"></input>
 
 </td>
 <td>
-<label for="status" style="position: relative; left: 150px; top:-200px;">Affiliation Status:<br></label>
-                    <select name="status" id="status" style="position: relative; left: 150px;top:-200px; box-shadow: 1px 1px 1px 1px; border: 0px; width: 300px; height: 30px">
+<label for="status" style="position: relative; left: 230px; top:-200px;">Affiliation Status:<br></label>
+                    <select name="status" id="status" style="position: relative; left: 230px;top:-200px; box-shadow: 1px 1px 1px 1px; border: 0px; width: 300px; height: 30px" required="required">
                         <option value="Affiliated to state" style="align-items: center;">Affiliated to State</option>
                        
                         <option value="Not Registered">Not Registered</option>
@@ -86,12 +105,12 @@
 
 <tr>
 <td>
-<label style="position: relative; top: -200px">Registered Address:<br></label>
-<input type="text"  name="address"style="border-left: 0px; border-top: 0px; border-right: 0px; width: 300px;position: relative;top: -200px" required="required">
+<label style="position: relative; top: -110px">Registered Address:<br></label>
+<input type="text"  name="address"style="border-left: 0px; border-top: 0px; border-right: 0px; width: 300px;position: relative;top: -110px" required="required">
 </td>
 <td>
-<label style="position: relative; left: 150px;top: -200px">Societies Act. Reg No : (Put NA if not available):<br></label>
-<input type="number" name="regno"style="border-left: 0px; border-top: 0px; border-right: 0px; width: 300px; position: relative; left: 150px;top: -200px" required="required">
+<label style="position: relative; left: 230px;top: -200px">Societies Act. Reg No : (Put NA if not available):<br></label>
+<input type="number" name="regno"style="border-left: 0px; border-top: 0px; border-right: 0px; width: 300px; position: relative; left: 230px;top: -200px" required="required">
 </td>
 
 <td>
@@ -101,12 +120,12 @@
 </tr>
 <tr>
 <td>
-<label style="position: relative; top: -200px">Address Line 2:<br></label>
-<input type="text" name="address1" placeholder="Type Here.." style="border-left: 0px; border-top: 0px; border-right: 0px; width: 300px;position: relative;top: -200px" required="required"></input>
+<label style="position: relative; top: -100px">Address Line 2:<br></label>
+<input type="text" name="address1" placeholder="Type Here.." style="border-left: 0px; border-top: 0px; border-right: 0px; width: 300px;position: relative;top: -100px" required="required"></input>
 </td>
 <td>
-<label style="position: relative; left: 150px; top: -200px">PAN No : (Put NA if not available)<br></label>
-<input type="text" name="pan" style="border-left: 0px; border-top: 0px; border-right: 0px; width: 300px; position: relative; left: 150px;top: -200px" required="required">
+<label style="position: relative; left: 230px; top: -200px">PAN No : (Put NA if not available)<br></label>
+<input type="text" name="pan" style="border-left: 0px; border-top: 0px; border-right: 0px; width: 300px; position: relative; left: 230px;top: -200px" required="required">
 </td>
 <td>
 <label style="position: relative; left: 300px; top: -140px">Website (Put NA if not available) : </label>
@@ -116,12 +135,12 @@
 <tr>
 
 <td>
-<label style="position: relative; top: -200px">City:<br></label>
-<input type="text" name="city"placeholder="Type Here.." style="border-left: 0px; border-top: 0px; border-right: 0px; width: 300px;position: relative;top: -200px" required="required"></input>
+<label style="position: relative; top: -100px">City:<br></label>
+<input type="text" name="city"placeholder="Type Here.." style="border-left: 0px; border-top: 0px; border-right: 0px; width: 300px;position: relative;top: -100px" required="required"></input>
 </td>
 <td>
-<label style="position: relative; left: 150px;top: -180px">Bank Account No with Branch & IFSC Code : <br>(Put NA if not available)<br></label>
-<textarea placeholder="type here..." name="bank" id="add" cols="30" rows="10" style="position: relative; left: 150px; top: -180px; width: 300px; height: 50px" required="required"></textarea>
+<label style="position: relative; left: 230px;top: -180px">Bank Account No with Branch & IFSC Code : <br>(Put NA if not available)<br></label>
+<textarea placeholder="type here..." name="bank" id="add" cols="30" rows="10" style="position: relative; left: 230px; top: -180px; width: 300px; height: 50px" required="required"></textarea>
 
 </td>
 <td>
@@ -131,39 +150,15 @@
 </tr>
 <tr>
 <td>
-<label for="state" style="position:relative; top: -220px">Registering State / U.T.:<br></label>
-                    <select name="state" id="state" style="position: relative;top:-220px; box-shadow: 1px 1px 1px 1px; border: 0px; width: 300px; height: 30px">
-                        <option value="select" style="align-items: center;">ANDAMAN NICOBAR</option>
-                        <option value="Andhra Pradhesh">Andhra Pradhesh</option>
-                        <option value="Karanataka">Karnataka</option>
-                        <option value="Tamil Nadu">Tamil Nadu</option>
-                        <option value="kerala">Kerala</option>
-                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                        <option value="Assam">Assam</option>
-                        <option value="Goa">Goa</option>
-                        <option value="Bihar">Bihar</option>
-                        <option value="Chandigarh">Chandigarh</option>
-                        <option value="Gujarat">Gujarat</option>
-                        <option value="Haryana">Haryana</option>
-                        <option value="Himachal Pradesh">Himachal Pradesh</option>
-                        <option value="Jharkhand">Jharkhand</option>
-                        <option value="Gujarat">Gujarat</option>
-                        <option value="Jammu Karshmir">Jammu Kashmir</option>
-                        <option value="Lakshadweep">Lakshadweep</option>
-                        <option value="Madhya Pradesh">Madhya Pradesh</option>
-                        <option value="NagaLand">NagaLand</option>
-                        <option value="West Bengal">West Bengal</option>
-                        <option value="Manipur">Manipur</option>
-                        <option value="Goa">Goa</option>
-                 			
- </select>                       
+<label for="state" style="position:relative; top: -160px">Registering State / U.T.:<br></label>
+ <input type="text" name="state" value="Karnataka" style="position: relative; top: -160px" readonly="readonly"></input>                   
 </td>
 <td>
  
-<input type="checkbox" name="disciplines" id="toggle-dropdown" style="position: relative; left: 150px; top: -200px" required="required">
- <label for="toggle-dropdown"  style="position: relative; left: 150px; top: -200px">Disciplines</label>
+<input type="checkbox" name="disciplines" id="toggle-dropdown" style="position: relative; left: 230px; top: -200px" required="required">
+ <label for="toggle-dropdown"  style="position: relative; left: 230px; top: -200px">Disciplines</label>
  
-  <div class="dropdown-content" style="position: relative; left: 150px;top: -200px">
+  <div class="dropdown-content" style="position: relative; left: 230px;top: -200px">
     <label style="position: relative; left: 150px;top: 70px"><input type="checkbox">Spee-Quad</label>
     <label style="position: relative; left: 150px;top: 70px"><input type="checkbox"> Speed-Inline</label>
     <label style="position: relative; left: 150px;top: 70px"><input type="checkbox"> Artistic</label>
@@ -194,40 +189,25 @@
 <label for="district" style="position:relative;top:-230px; border: 0px">Registering District :<br></label>
                     <select name="district" id="district" style="position: relative;top:-230px; box-shadow: 1px 1px 1px 1px; border: 0px; width: 300px; height: 30px">
                         <option value="select" style="align-items: center;">Select District</option>
-                        <option value="Tumkur">Tumkur</option>
-                        <option value="Bengaluru">Bengaluru</option>
-                        <option value="Bengaluru">Bengaluru urban</option>
-                        <option value="Hassan">Hasssan</option>
-                        <option value="Dharwad">Dharwad</option>
-                        <option value="Uttara Kannada">Uttara Kannada</option>
-                        <option value="Bagalkot">Bagalkot</option>
-                        <option value="Raichur">Raichur</option>
-     					<option value="vijayapura">vijapura</option>
-                        <option value="udupi">udupi</option>
-                        <option value="Bidar">Bidar</option>
+                 		 <option value="Raichur">Raichur</option>
+     					<option value="Bidar">Bidar</option>
                         <option value="Kalaburgi">Kalaburgi</option>
                         <option value="Ballari">Ballari</option>
-                        <option value="Chikkamagaluru">Chikkamagaluru</option>
-                        <option value="Belagavi">Belagavi</option>
-                        <option value="Chitadurga">Chitradurga</option>
-                        <option value="Shivamogga">Shivamogga</option>
-                        <option value="Mandya">Mandya</option>
-                        <option value="Kodagu">Kodagu</option>
-                        <option value="Gadag-Betageri">Gadag-Betageri</option>
-                        <option value="Dakshina Kannada">Dakshina Kannada</option>
-                        <option value="Kolar">Kolar</option>
-                        <option value="Davanagere">Davanagere</option>
-
+                        <option value="koppal">Koppal</option>
+                        <option value="Yadgir">Yadgir</option>
+                        
+                        
+                        
          </select>
 
 </td>
 <td>
 
-<input type="checkbox" id="toggle" style="position: relative; left: 140px; top: -140px">
-  <label for="toggle" name="rinkfacilities"style="position: relative; left: 150px; top: -140px">Rink Facilities Available in your district:
+<input type="checkbox" id="toggle" style="position: relative; left: 230px; top: -140px" required="required">
+  <label for="toggle" name="rinkfacilities"style="position: relative; left: 230px; top: -140px">Rink Facilities Available in your district:
   </label>
 
-  <div class="dropdown" top="-230px" style="position: relative; left: 150px">
+  <div class="dropdown" top="-230px" style="position: relative; left: 230px">
     <label  style="position: relative; left: 150px; top: -140px"><input type="checkbox">200m Synthetic Parabolic Track</label>
     <label style="position: relative; left: 150px;top: -140px"><input type="checkbox">Exclusive Road Circuit</label>
     <label style="position: relative; left: 150px;top: -140px"><input type="checkbox"> 200m Synthetic Banked Track</label>
@@ -249,11 +229,11 @@
 <tr>
 <td>
 <label style="position: relative; top: -200px;">Mobile:<br></label>
-<input type="number" name="mobile" style="border-left: 0px; border-top: 0px; border-right: 0px; width: 300px;position: relative;top: -200px"></input>
+<input type="number" name="mobile" style="border-left: 0px; border-top: 0px; border-right: 0px; width: 300px;position: relative;top: -200px" required="required"></input>
 </td>
 <td>
-<label for="rink" style="position: relative; left: 150px;top: -120px">Rink Status:<br></label>
-                    <select name="rinkstatus" id="rink" style="position: relative; left: 150px;top:-120px; box-shadow: 1px 1px 1px 1px; border: 0px; width: 300px; height: 30px">
+<label for="rink" style="position: relative; left: 230px;top: -120px">Rink Status:<br></label>
+                    <select name="rinkstatus" id="rink" style="position: relative; left: 230px;top:-120px; box-shadow: 1px 1px 1px 1px; border: 0px; width: 300px; height: 30px" required="required">
                         <option value="select" style="align-items: center;"><b>Owned</b></option>
                         <option value="Rented">Rented-Private</option>
                         <option value="Rented/leased-Govt">Rented/leased-Govt</option>
@@ -267,8 +247,8 @@
 <input type="email" placeholder="Type Here.." style="border-left: 0px; border-top: 0px; border-right: 0px; width: 300px;position: relative;top: -200px" required="required"></input>
 </td>
 <td>
-<label style="position: relative; left: 150px; top: -50px">Office Bearers - Name & Phone :</label>
-<textarea id="add" name="officebearers" placeholder="type here.."  cols="30" rows="10" style="position: relative; left: 150px; top: -50px; width: 300px; height: 50px;" required="required"></textarea>
+<label style="position: relative; left: 230px; top: -50px">Office Bearers - Name & Phone :</label>
+<textarea id="add" name="officebearers" placeholder="type here.."  cols="30" rows="10" style="position: relative; left: 230px; top: -50px; width: 300px; height: 50px;" required="required"></textarea>
 </td>
 </tr>
 <tr>
@@ -280,31 +260,31 @@
 <input type="file" name="logo"id="file1" onchange="File1()"style="position: relative; top: -200px" required="required"></input>
 </td>
 <td>
-<label style="position: relative; top: -30px; left: 160px">Societies Registration Certificate-:<br></label>
-<input type="file" name="registrationcertificate" id="file2" onchange="file"   style="position: relative; top: -30px; left: 160px" required></input>
-<h5 style="position: relative; left: 170px; top:-45px ">Upload a PDF with your societies registration certificates. (file size less than 3MB).</h5>
+<label style="position: relative; top: -30px; left: 230px">Societies Registration Certificate-:<br></label>
+<input type="file" name="registrationcertificate" id="file2" onchange="file"   style="position: relative; top: -30px; left: 230px" required></input>
+<h5 style="position: relative; left: 230px; top:-45px ">Upload a PDF with your societies registration certificates. (file size less than 3MB).</h5>
 </td>
 
 <td>
-<label style="position: relative; top: 40px; left:-250px">Executive Committee , Latest Election Results & Affiliation Letter:</label>
-<input type="file" name="affiliationletter" id="file3" onchange="Filevalidation()" style="position: relative; top: 40px; left: -250px" required="required"></input>
-<h5 style="position: relative; top: 40px; left: -240px">Upload A PDF(file lee than 3MB)</h5>
+<label style="position: relative; top: 60px; left:-85px">Executive Committee , Latest Election Results & Affiliation Letter:</label>
+<input type="file" name="affiliationletter" id="file3" onchange="Filevalidation()" style="position: relative; top: 60px; left: -85px" required="required"></input>
+<h5 style="position: relative; top: 60px; left: -85px">Upload A PDF(file lee than 3MB)</h5>
 </td>
 </tr>
 <div>
-<h4 style="position: relative; top:1200px; left: 600px">Declaration</h4>
-<P style="position: relative; top: 1200px">I hereby declare that</P>
-<p style="position: relative; top: 1200px">1.I Know all RSFI Rules & Regulations and I abide by the same.We do not entertain any discipline/sport other than RSFI;failing the same will result in disaffiliation and serious action by state units and RSFI</p>
-<p style="position: relative; top: 1200px" >2.I have attached the proof of registration and affiliation as per RSFI guidelines and i will produce necessary original  documents whenever asked by RSFI.satae Association</p>
-<p style="position: relative; top: 1200px">3. I accept to share the information provided by me to RSFI and any service providers associated with RSFI.</p>
-<p style="position: relative; top: 1200px">4.I accept to receive newsletters/ any communication from of mail,email,phone calls,SMS</p>
-<p style="position: relative; top: 1200px">5.All the information entered in the online registration system(as furnished above)are true and i am responsible for the correctness of the information provided.</p>
-<p style="position: relative; top: 1200px">6.I will accept any decision taken by RSFI if any of the information given above found wrong.RSFI holds all the rights to reject or cancel the enrollment anytime.</p>
+<h4 style="position: relative; top:1500px; left: 600px">Declaration</h4>
+<P style="position: relative; top: 1500px">I hereby declare that</P>
+<p style="position: relative; top: 1500px">1.I Know all RSFI Rules & Regulations and I abide by the same.We do not entertain any discipline/sport other than RSFI;failing the same will result in disaffiliation and serious action by state units and RSFI</p>
+<p style="position: relative; top: 1500px" >2.I have attached the proof of registration and affiliation as per RSFI guidelines and i will produce necessary original  documents whenever asked by RSFI.satae Association</p>
+<p style="position: relative; top: 1500px">3. I accept to share the information provided by me to RSFI and any service providers associated with RSFI.</p>
+<p style="position: relative; top: 1500px">4.I accept to receive newsletters/ any communication from of mail,email,phone calls,SMS</p>
+<p style="position: relative; top: 1500px">5.All the information entered in the online registration system(as furnished above)are true and i am responsible for the correctness of the information provided.</p>
+<p style="position: relative; top: 1500px">6.I will accept any decision taken by RSFI if any of the information given above found wrong.RSFI holds all the rights to reject or cancel the enrollment anytime.</p>
 </div>
-<input type="checkbox" name="checkbox" value="checked" style="position: relative; top: 1200px; width: 30px"><P style="position: relative; top: 1165px;left: 30px">I read & agree to terms and conditions</P></input>
+<input required="required" type="checkbox" name="checkbox" value="checked" style="position: relative; top: 1500px; width: 30px"><P style="position: relative; top: 1465px;left: 30px">I read & agree to terms and conditions</P></input>
 
 </table>
-<button type="submit"  value="submit"  style="position: relative; top: 450px; width: 1500px; height:40px; border: 0px ;background-color: #BCD6BD ">I AGREE TO RSFI RULES & SUBMIT</button>
+<button type="submit"  value="submit"  style="position: relative; top: 600px; width: 1500px; height:40px; border: 0px ;background-color: #BCD6BD ">I AGREE TO RSFI RULES & SUBMIT</button>
 </form>
 
 
@@ -390,22 +370,60 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
-  function validateForm() {
+  function validateForm() 
+  {
     var inputs = document.querySelectorAll('#myForm input');
     var isValid = true;
     
     // Check each input field
-    inputs.forEach(function(input) {
-      if (input.value.trim() === '') {
+    inputs.forEach(function(input) 
+    		{
+      if (input.value.trim() === '') 
+      {
         input.classList.add('error');
         isValid = false;
-      } else {
+      } 
+      else
+      {
         input.classList.remove('error');
       }
     });
     
     return isValid;
   }
+  
+  
+  function calculateAge() 
+  {
+      var dob = document.getElementById("dob").value; // Get the date of birth value from the input field
+      var birthDate = new Date(dob); // Create a Date object from the input value
+      var currentDate = new Date(); // Get the current date
+	var date=new  Date();
+      var month=new Date();
+      var year=new Date();
+      // Calculate the difference in milliseconds between the current date and the date of birth
+      var difference = currentDate - birthDate;
+
+      // Calculate the age based on the time difference
+      var ageDate = new Date(difference);
+      var age = Math.abs(ageDate.getUTCFullYear() - 1970); // Subtract 1970 to account for the Unix epoch
+
+      // Place the age in the another field
+      document.getElementById("ageField").value = age+" "+"as on"+date.getDate()+"-"+month.getMonth()+"-"+year.getFullYear()
+  }
+  
+  function agegroup() {
+      var age = document.getElementById("age").value;
+      var agegroup = document.getElementById("agegroup");
+
+      if (age < 18) {
+    	  agegroup.value = "You are underage!";
+      } else if (age >= 18 && age < 65) {
+    	  agegroup.value = "You are an adult.";
+      } else {
+    	  agegroup.value = "You are a senior citizen.";
+      }
+    }
 </script>
 </body>
 </html>
