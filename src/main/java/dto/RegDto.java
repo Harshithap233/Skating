@@ -4,12 +4,97 @@ import java.sql.Blob;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 
 @Entity
 public class RegDto 
 {
 	@Id
-private long mobile;
+	private long mobile;
+	private String AssociationName;
+	private String Establishedyear;
+	private int    NoofAffiliatedClubs;
+	private String OfficialCorrespondent ;
+	private String AffiliationStatus;
+	private String ClubNamesPhone;
+	private String RegisteredAddress;
+	private int    SocietiesRegno;
+	private String Acheivements;
+	private String Address;
+	private String PANNo;
+	private String Website;
+	private String City;
+	private String BankDetails;
+	private String FacebookLink;
+	private String State;
+	private String InstagramLink;
+	private String Interested;
+	private String District;
+	private String RinkFacilities;
+	private String RinkStatus;
+	private String Email;
+	private String OfficeBearersNamePhone;
+	@Lob
+	private byte[] logo;
+	public byte[] getLogo() {
+		return logo;
+	}
+	public void setLogo(byte[] logo) {
+		this.logo = logo;
+	}
+	private Blob RegistrationCertificate;
+	private Blob AffiliationLetter;
+	private String name;
+	private String DOB;
+	private String Age;
+	private String AgeGroup;
+	private String gender;
+	private String Disciplines;
+	private String intersted;
+
+	
+public String getIntersted() {
+		return intersted;
+	}
+	public void setIntersted(String intersted) {
+		this.intersted = intersted;
+	}
+public String getDisciplines() {
+		return Disciplines;
+	}
+	public void setDisciplines(String disciplines) {
+		Disciplines = disciplines;
+	}
+public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getDOB() {
+		return DOB;
+	}
+	public void setDOB(String dOB) {
+		DOB = dOB;
+	}
+	public String getAge() {
+		return Age;
+	}
+	public void setAge(String age) {
+		Age = age;
+	}
+	public String getAgeGroup() {
+		return AgeGroup;
+	}
+	public void setAgeGroup(String ageGroup) {
+		AgeGroup = ageGroup;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
 public long getMobile() {
 		return mobile;
 	}
@@ -154,12 +239,7 @@ public long getMobile() {
 	public void setOfficeBearersNamePhone(String officeBearersNamePhone) {
 		OfficeBearersNamePhone = officeBearersNamePhone;
 	}
-	public Blob getLogo() {
-		return logo;
-	}
-	public void setLogo(Blob logo) {
-		this.logo = logo;
-	}
+	
 	public Blob getRegistrationCertificate() {
 		return RegistrationCertificate;
 	}
@@ -172,30 +252,5 @@ public long getMobile() {
 	public void setAffiliationLetter(Blob affiliationLetter) {
 		AffiliationLetter = affiliationLetter;
 	}
-private String AssociationName;
-private String Establishedyear;
-private int    NoofAffiliatedClubs;
-private String OfficialCorrespondent ;
-private String AffiliationStatus;
-private String ClubNamesPhone;
-private String RegisteredAddress;
-private int    SocietiesRegno;
-private String Acheivements;
-private String Address;
-private String PANNo;
-private String Website;
-private String City;
-private String BankDetails;
-private String FacebookLink;
-private String State;
-private String InstagramLink;
-private String Interested;
-private String District;
-private String RinkFacilities;
-private String RinkStatus;
-private String Email;
-private String OfficeBearersNamePhone;
-private Blob logo;
-private Blob RegistrationCertificate;
-private Blob AffiliationLetter;
+
 }

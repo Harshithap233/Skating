@@ -52,7 +52,17 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
 	String rinkstatus=req.getParameter("rinkstatus");
 	String email=req.getParameter("email");
 	String officebearers=req.getParameter("officebearers");
-
+	String fullname=req.getParameter("fullname");
+	String gender=req.getParameter("gender");
+	String dob=req.getParameter("dob");
+	String ageField=req.getParameter("ageField");
+	String agegroup=req.getParameter("agegroup");
+	
+	
+	  Part logo=req.getPart("logo");
+	 
+	 
+	
 	RegDto dto=new RegDto();
 	dto.setAcheivements(achei);
 	dto.setAddress(address1);
@@ -78,12 +88,27 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
 	dto.setSocietiesRegno(regno1);
 	dto.setState(state);
 	dto.setWebsite(website);
+	dto.setAge(ageField);
+	dto.setAgeGroup(agegroup);
+	dto.setDOB(dob);
+	dto.setGender(gender);
+	dto.setName(fullname);
+	dto.setAffiliationStatus(status);
+	dto.setDisciplines(disciplines);
+	dto.setInterested(insterted);
 	
 	
-	Part logo=req.getPart("logo");
 	
-	dto.setLogo((Blob) logo);
 	
+	 byte[] picture = null;
+	  InputStream inputStream = logo.getInputStream();
+	  
+	  picture = new byte[inputStream.available()];
+	  
+	 inputStream.read(picture);
+
+	 dto.setLogo(picture);
+	 
 	Dao dao=new Dao();
 	dao.insert(dto);
 }
